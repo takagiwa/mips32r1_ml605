@@ -1,0 +1,89 @@
+##
+## User Constraint File for ML605
+##
+## MISH International
+##
+
+NET "CPU_RESET"					LOC = "H10";	## 2 on SW10 pushbutton (active-High)
+NET "CPU_RESET"					IOSTANDARD = SSTL15;
+
+## 200MHz LVDS oscillator
+NET "SYSCLK_N"					LOC = "H9";		## 5 on U11, 5 on U89 (DNP)
+NET "SYSCLK_P"					LOC = "J9";		## 4 on U11, 4 on U89 (DNP)
+NET "SYSCLK_N"					IOSTANDARD = LVDS_25;
+NET "SYSCLK_P"					IOSTANDARD = LVDS_25;
+## GPIOs
+NET "GPIO_DIP_SW<1>"			LOC = "D22";	## 1 on SW1 DIP switch (active-High)
+NET "GPIO_DIP_SW<2>"			LOC = "C22";	## 2 on SW1 DIP switch (active-High)
+NET "GPIO_DIP_SW<3>"			LOC = "L21";	## 3 on SW1 DIP switch (active-High)
+NET "GPIO_DIP_SW<4>"			LOC = "L20";	## 4 on SW1 DIP switch (active-High)
+NET "GPIO_DIP_SW<5>"			LOC = "C18";	## 5 on SW1 DIP switch (active-High)
+NET "GPIO_DIP_SW<6>"			LOC = "B18";	## 6 on SW1 DIP switch (active-High)
+NET "GPIO_DIP_SW<7>"			LOC = "K22";	## 7 on SW1 DIP switch (active-High)
+NET "GPIO_DIP_SW<8>"			LOC = "K21";	## 8 on SW1 DIP switch (active-High)
+NET "GPIO_DIP_SW<*>"            IOSTANDARD = SSTL15;
+##
+NET "GPIO_LED<0>"				LOC = "AC22";	## 2 on LED DS12, 1 on J62
+NET "GPIO_LED<1>"				LOC = "AC24";	## 2 on LED DS11, 2 on J62
+NET "GPIO_LED<2>"				LOC = "AE22";	## 2 on LED DS9, 3 on J62
+NET "GPIO_LED<3>"				LOC = "AE23";	## 2 on LED DS10, 4 on J62
+NET "GPIO_LED<4>"				LOC = "AB23";	## 2 on LED DS15, 5 on J62
+NET "GPIO_LED<5>"				LOC = "AG23";	## 2 on LED DS14, 6 on J62
+NET "GPIO_LED<6>"				LOC = "AE24";	## 2 on LED DS22, 7 on J62
+NET "GPIO_LED<7>"				LOC = "AD24";	## 2 on LED DS21, 8 on J62
+NET "GPIO_LED<*>"				IOSTANDARD = LVCMOS25;
+##
+NET "GPIO_LED_C"				LOC = "AP24";	## 2 on LED DS16
+NET "GPIO_LED_E"				LOC = "AE21";	## 2 on LED DS19
+NET "GPIO_LED_N"				LOC = "AH27";	## 2 on LED DS20
+NET "GPIO_LED_S"				LOC = "AH28";	## 2 on LED DS18
+NET "GPIO_LED_W"				LOC = "AD21";	## 2 on LED DS17
+NET "GPIO_LED_C"				IOSTANDARD = LVCMOS25;
+NET "GPIO_LED_E"				IOSTANDARD = LVCMOS25;
+NET "GPIO_LED_N"				IOSTANDARD = LVCMOS25;
+NET "GPIO_LED_S"				IOSTANDARD = LVCMOS25;
+NET "GPIO_LED_W"				IOSTANDARD = LVCMOS25;
+##
+NET "GPIO_SW_C"					LOC = "G26";	## 2 on SW9 pushbutton (active-High)
+NET "GPIO_SW_E"					LOC = "G17";	## 2 on SW7 pushbutton (active-High)
+NET "GPIO_SW_N"					LOC = "A19";	## 2 on SW5 pushbutton (active-High)
+NET "GPIO_SW_S"					LOC = "A18";	## 2 on SW6 pushbutton (active-High)
+NET "GPIO_SW_W"					LOC = "H17";	## 2 on SW8 pushbutton (active-High)
+
+NET "GPIO_SW_C"                 IOSTANDARD = SSTL15;
+NET "GPIO_SW_E"                 IOSTANDARD = SSTL15;
+NET "GPIO_SW_N"                 IOSTANDARD = SSTL15;
+NET "GPIO_SW_S"                 IOSTANDARD = SSTL15;
+NET "GPIO_SW_W"                 IOSTANDARD = SSTL15;
+
+## UART
+#NET "USB_1_CTS"					LOC = "T24";	## 22 on U34
+#NET "USB_1_RTS"					LOC = "T23";	## 23 on U34
+NET "USB_1_CTS"					LOC = "T23";	## 22 on U34
+NET "USB_1_RTS"					LOC = "T24";	## 23 on U34
+#NET "USB_1_RX"					LOC = "J25";	## 24 on U34
+#NET "USB_1_TX"					LOC = "J24";	## 25 on U34
+NET "USB_1_RX"					LOC = "J24";	## 24 on U34
+NET "USB_1_TX"					LOC = "J25";	## 25 on U34
+
+NET "LCD_DB_LS<4>"				LOC = "AD14";	## 4 on J41
+NET "LCD_DB_LS<5>"				LOC = "AK11";	## 3 on J41
+NET "LCD_DB_LS<6>"				LOC = "AJ11";	## 2 on J41
+NET "LCD_DB_LS<7>"				LOC = "AE12";	## 1 on J41
+NET "LCD_E_LS"					LOC = "AK12";	## 9 on J41
+NET "LCD_RS_LS"					LOC = "T28";	## 11 on J41
+NET "LCD_RW_LS"					LOC = "AC14";	## 10 on J41
+
+NET "LCD_DB_LS<4>"				IOSTANDARD = LVCMOS25;
+NET "LCD_DB_LS<5>"				IOSTANDARD = LVCMOS25;
+NET "LCD_DB_LS<6>"				IOSTANDARD = LVCMOS25;
+NET "LCD_DB_LS<7>"				IOSTANDARD = LVCMOS25;
+NET "LCD_E_LS"					IOSTANDARD = LVCMOS25;
+NET "LCD_RS_LS"					IOSTANDARD = LVCMOS25;
+NET "LCD_RW_LS"					IOSTANDARD = LVCMOS25;
+
+# Main IIC Bus
+#NET "i2c_scl" LOC = F9 | IOSTANDARD = LVCMOS33; # IIC_Main SCL
+#NET "i2c_sda" LOC = F8 | IOSTANDARD = LVCMOS33; # IIC_Main SDA
+NET "i2c_scl" LOC = AK9; # IIC_Main SCL
+NET "i2c_sda" LOC = AE9; # IIC_Main SDA
